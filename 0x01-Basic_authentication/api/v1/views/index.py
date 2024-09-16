@@ -27,6 +27,6 @@ def stats() -> str:
 
 
 @app_views.route('/unauthorized', methods=['GET'], strict_slashes=False)
-def unauth():
+def unauth() -> None:
     """ An endpoint to test unauthorized error handler """
     abort(401)
