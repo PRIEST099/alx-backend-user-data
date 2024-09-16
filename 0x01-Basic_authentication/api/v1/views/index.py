@@ -33,6 +33,6 @@ def unauth() -> None:
 
 
 @app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
-def unauth() -> None:
+def ForbiddenErroHandler() -> None:
     """ An endpoint to test forbidden error handler """
     abort(403)
