@@ -30,3 +30,9 @@ def stats() -> str:
 def unauth() -> None:
     """ An endpoint to test unauthorized error handler """
     abort(401)
+
+
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
+def unauth() -> None:
+    """ An endpoint to test forbidden error handler """
+    abort(403)
