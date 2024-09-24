@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
-"""User session module.
+"""Sessions in database
 """
 from models.base import Base
 
 
 class UserSession(Base):
-    """User session class.
+    """Representation of user sessions
     """
-
     def __init__(self, *args: list, **kwargs: dict):
-        """Initializes a User session instance.
+        """User session Initialilizer
         """
         super().__init__(*args, **kwargs)
         self.user_id = kwargs.get('user_id')
